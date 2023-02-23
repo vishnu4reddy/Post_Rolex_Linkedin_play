@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, sync_playwright
+from playwright.sync_api import Page
 import time
 from Data import config
 Email = config.user_git
@@ -6,7 +6,7 @@ password = config.git_pass
 number = config.number
 
 
-def test_github(page: Page):
+def github(page: Page):
     # with sync_playwright() as p:
     #     browser = p.chromium.launch(headless=False)
     #     context = browser.new_context(
@@ -32,7 +32,7 @@ def test_github(page: Page):
     page.locator(
         "//form[@action='/dashboard/ajax_my_repositories?location=left']//button[@name='button'][normalize-space()='Show more']").click()
     page.locator(
-        "//ul[2]//li[2]//div[1]//div[1]//a[1]").click()
+        "//ul[2]//li[1]//div[1]//div[1]//a[1]").click()
     page.get_by_role("link", name="Tests").click()
     page.get_by_role("link", name="test_Share.py").click()
     page.locator(
