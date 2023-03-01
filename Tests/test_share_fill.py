@@ -1,5 +1,4 @@
-from playwright.sync_api import Page, expect
-import time
+
 from Data import imp
 Email = imp.username
 password = imp.password
