@@ -9,7 +9,7 @@ def page1():
         context = browser.new_context()
         page = browser.new_page()
         yield page
-        context.close() 
+        context.close()
 # # Copyright (c) Microsoft Corporation.
 # #
 # # Licensed under the Apache License, Version 2.0 (the "License")
